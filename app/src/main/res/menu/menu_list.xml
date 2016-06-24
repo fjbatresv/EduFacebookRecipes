@@ -6,16 +6,15 @@
     tools:context=".main.ui.RecipeMainActivity">
     <item
         android:id="@+id/action_list"
-        android:title="@string/main.menu.action.list"
-        android:icon="@android:drawable/btn_star_big_off"
+        android:title="@string/list.menu.action.main"
+        android:icon="@android:drawable/ic_menu_gallery"
         app:showAsAction="always" />
     <item
         android:id="@+id/menu_logout"
         android:title="@string/global.menu.action.logout"
         app:showAsAction="never" />
     <item
-        android:id="@+id/menu_main_fabs"
+        android:id="@+id/menu_fabs"
         android:title="@string/global.menu.action.fabs"
         app:showAsAction="never" />
-
 </menu>

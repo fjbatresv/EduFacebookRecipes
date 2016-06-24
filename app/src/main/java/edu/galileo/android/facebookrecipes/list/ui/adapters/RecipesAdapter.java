@@ -57,11 +57,7 @@ public class RecipesAdapter extends RecyclerView.Adapter<RecipesAdapter.ViewHold
     }
 
     public void setRecipes(List<Recipe> newRecipes){
-        for (Recipe newRecipe : newRecipes){
-            if(!recipeList.contains(newRecipe)){
-                recipeList.add(newRecipe);
-            }
-        }
+       recipeList = newRecipes;
         notifyDataSetChanged();
     }
 

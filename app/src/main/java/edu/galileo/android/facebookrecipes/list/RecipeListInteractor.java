@@ -5,4 +5,5 @@ package edu.galileo.android.facebookrecipes.list;
  */
 public interface RecipeListInteractor {
     void execute();
+    void fabs();
 }

@@ -11,6 +11,7 @@ public interface RecipeListPresenter {
     void onCreate();
     void onDestroy();
     void getRecipes();
+    void getFavorites();
     void removeRecipe(Recipe recipe);
     void toggleFavorite(Recipe recipe);
     void onEventMainThread(RecipeListEvent event);

@@ -7,6 +7,7 @@ import edu.galileo.android.facebookrecipes.entities.Recipe;
  */
 public interface RecipeListRepository {
     void getSavedRecipes();
+    void getFabRecipes();
     void updateRecipe(Recipe recipe);
     void removeRecipe(Recipe recipe);
 }

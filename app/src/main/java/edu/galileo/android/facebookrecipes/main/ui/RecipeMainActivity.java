@@ -97,8 +97,17 @@ public class RecipeMainActivity extends AppCompatActivity implements RecipeMainV
             case R.id.action_list:
                 navigateToListScreen();
                 break;
+            case R.id.menu_main_fabs:
+                showFabs();
+                break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void showFabs() {
+        startActivity(new Intent(this, RecipeListActivity.class)
+                .putExtra(RecipeListActivity.useFabs, true)
+        );
     }
 
     private void navigateToListScreen() {

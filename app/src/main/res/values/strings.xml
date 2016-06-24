@@ -9,6 +9,9 @@
     <string name="main.menu.action.list">Recetas guardadas</string>
 
     <string name="global.menu.action.logout">Cerrar sesión</string>
+    <string name="list.menu.action.main">Elegir receta</string>
+    <string name="global.menu.action.fabs">Favoritos</string>
+    <string name="global_menu_action_all">Todo</string>
 
 
 </resources>

@@ -9,12 +9,19 @@ import com.facebook.login.LoginManager;
 import com.raizlabs.android.dbflow.config.FlowManager;
 
 import edu.galileo.android.facebookrecipes.libs.DI.LibsModule;
+import edu.galileo.android.facebookrecipes.list.DI.DaggerRecipeListComponent;
+import edu.galileo.android.facebookrecipes.list.DI.RecipeListComponent;
+import edu.galileo.android.facebookrecipes.list.DI.RecipeListModule;
+import edu.galileo.android.facebookrecipes.list.ui.RecipeListActivity;
+import edu.galileo.android.facebookrecipes.list.ui.RecipeListView;
+import edu.galileo.android.facebookrecipes.list.ui.adapters.OnItemClickListener;
 import edu.galileo.android.facebookrecipes.login.ui.LoginActivity;
 import edu.galileo.android.facebookrecipes.main.DI.DaggerRecipeMainComponent;
 import edu.galileo.android.facebookrecipes.main.DI.RecipeMainComponent;
 import edu.galileo.android.facebookrecipes.main.DI.RecipeMainModule;
 import edu.galileo.android.facebookrecipes.main.ui.RecipeMainActivity;
 import edu.galileo.android.facebookrecipes.main.ui.RecipeMainView;
+
 
 /**
  * Created by javie on 21/06/2016.
@@ -59,6 +66,13 @@ public class FacebookRecipesApp extends Application {
                 .builder()
                 .libsModule(new LibsModule(activity))
                 .recipeMainModule(new RecipeMainModule(view))
+                .build();
+    }
+    public RecipeListComponent getRecipeListComponent(RecipeListActivity activity, RecipeListView view, OnItemClickListener listener){
+        return DaggerRecipeListComponent
+                .builder()
+                .libsModule(new LibsModule(activity))
+                .recipeListModule(new RecipeListModule(view, listener))
                 .build();
     }
 }
